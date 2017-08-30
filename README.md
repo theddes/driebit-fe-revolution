@@ -2,13 +2,13 @@
 
 Development time: *x hours*
 
-> **Scaffolding was done by [vue-CLI](https://github.com/vuejs/vue-cli) using the [PWA template](https://github.com/vuejs-templates/pwa)**
+> **Scaffolding was done by [`vue-CLI`](https://github.com/vuejs/vue-cli) using the [PWA template](https://github.com/vuejs-templates/pwa)**
 >
 > *Using [runtime-only](https://gist.github.com/anchal20/f2ac9807263e106c1308f7143df1cf09) build of Vue*
 >
 > `$ vue init pwa revolution`
 >
-> Additional packages added: `vuex` (state management), `axios` (http client)
+> Additional packages added: [`vuex`](https://github.com/vuejs/vuex) (state management), [`axios`](https://github.com/mzabriskie/axios) (http client)
 
 ### **Build Setup**
 

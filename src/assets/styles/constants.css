@@ -1,0 +1,19 @@
+:root {
+    --font-family: 'Avenir', 'Nunito', Helvetica, Arial, sans-serif;
+    --font-size: 15px;
+
+    --spacing: 1px;
+    --tracking: 0rem;
+    --line-height: 1.2;
+    --tracking-medium: 0.5rem;
+    --tracking-large: 0.8rem;
+
+    --color-bg: #FCFEFE;
+    --color-text: #000;
+
+    --color-cyan: #e4fdff;
+    --color-cerulean: #00b1bd;
+    --color-lagoon: #046287;
+    --color-terracota: #dc6f2d;
+    --color-robroy: #dda858;
+}

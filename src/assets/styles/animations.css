@@ -1,0 +1,8 @@
+@keyframes blur_in {
+    0% {
+        filter: blur(5px);
+    }
+    100% {
+        filter: blur(0px);
+    }
+}

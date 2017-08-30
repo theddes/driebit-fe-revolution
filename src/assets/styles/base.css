@@ -1,0 +1,40 @@
+html {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    word-spacing: var(--spacing);
+    letter-spacing: var(--tracking);
+    line-height: var(--line-height);
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    cursor: default;
+}
+
+::selection {
+    background: var(--color-cyan);
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.container {
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+.section {
+    margin: 40px auto;
+}
+
+.mobile-first {
+    max-width: 414px;
+    margin: 0 auto;
+}

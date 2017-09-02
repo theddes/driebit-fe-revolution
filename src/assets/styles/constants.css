@@ -1,5 +1,5 @@
 :root {
-    --font-family: 'Avenir', 'Nunito', Helvetica, Arial, sans-serif;
+    --font-family: 'Mukta Mahee', 'Nunito', Helvetica, Arial, sans-serif;
     --font-size: 15px;
 
     --spacing: 1px;
@@ -8,8 +8,8 @@
     --tracking-medium: 0.5rem;
     --tracking-large: 0.8rem;
 
-    --color-bg: #FCFEFE;
-    --color-text: #000;
+    --color-bg: #fafafa;
+    --color-text: #333;
 
     --color-cyan: #e4fdff;
     --color-cerulean: #00b1bd;

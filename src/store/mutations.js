@@ -1,8 +1,11 @@
 import Vue from 'vue'
 
 const mutations = {
-    set_name (state, name) {
-        Vue.set(state, 'name', name)
+    toggle_searching (state, value) {
+        Vue.set(state, 'searching', value)
+    },
+    update_search_results (state, results) {
+        Vue.set(state, 'results', results)
     }
 }
 

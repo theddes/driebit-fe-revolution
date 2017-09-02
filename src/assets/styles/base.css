@@ -24,17 +24,3 @@ html {
     box-sizing: border-box;
     margin: 0;
 }
-
-.container {
-    max-width: 920px;
-    margin: 0 auto;
-}
-
-.section {
-    margin: 40px auto;
-}
-
-.mobile-first {
-    max-width: 414px;
-    margin: 0 auto;
-}

@@ -1,6 +1,6 @@
 # Driebit Revolution
 
-Development time: *x hours*
+Development time: *4 hours*
 
 > **Scaffolding was done by [`vue-CLI`](https://github.com/vuejs/vue-cli) using the [PWA template](https://github.com/vuejs-templates/pwa)**
 >
@@ -9,6 +9,8 @@ Development time: *x hours*
 > `$ vue init pwa revolution`
 >
 > Additional packages added: [`vuex`](https://github.com/vuejs/vuex) (state management), [`axios`](https://github.com/mzabriskie/axios) (http client)
+
+Since we decided to use a non-public API we have to deal with CORS. I suggest using an [extension](https://chrome.google.com/webstore/detail/cors-toggle/omcncfnpmcabckcddookmnajignpffnh?hl=en) to deal with this.
 
 ### **Build Setup**
 

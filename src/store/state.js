@@ -1,5 +1,6 @@
 const state = {
-    name: 'Valparaiso'
+    searching: false,
+    results: null
 }
 
 export default state

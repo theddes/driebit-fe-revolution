@@ -10,8 +10,7 @@ Development time: *4 hours*
 >
 > Additional packages added: [`vuex`](https://github.com/vuejs/vuex) (state management), [`axios`](https://github.com/mzabriskie/axios) (http client)
 
-**Since we decided to use a non-public API we have to deal with CORS.
-I suggest using an [extension](https://chrome.google.com/webstore/detail/cors-toggle/omcncfnpmcabckcddookmnajignpffnh?hl=en) to disable CORS.**
+**Since we decided to use a non-public API I suggest using an [extension](https://chrome.google.com/webstore/detail/cors-toggle/omcncfnpmcabckcddookmnajignpffnh?hl=en) to disable CORS.**
 
 ### **Build Setup**
 

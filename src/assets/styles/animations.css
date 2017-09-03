@@ -29,3 +29,11 @@
     opacity: 0;
     transform: translateY(-3em);
 }
+
+.overlay-enter-active, .overlay-leave-active {
+    transition: all 0.3s;
+    animation: none;
+}
+.overlay-enter, .overlay-leave-to {
+    opacity: 0;
+}

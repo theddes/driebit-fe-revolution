@@ -1,5 +1,8 @@
 <template>
     <div id="app">
+        <transition name="overlay">
+            <modal v-if="modalVisible"></modal>
+        </transition>
         <router-view></router-view>
         <aside class="no-results" v-if="results && !results.length && $route.params.term && !searching">
             Couldn't find anything.. :(
@@ -9,10 +12,12 @@
 
 <script>
     import { mapState } from 'vuex'
+    import modal from '@/components/modal'
     export default {
         name: 'Driebit',
+        components: { modal },
         computed: {
-            ...mapState(['searching', 'results'])
+            ...mapState(['searching', 'results', 'modalVisible'])
         }
     }
 </script>

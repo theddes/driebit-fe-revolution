@@ -1,5 +1,5 @@
 <template>
-    <li :class="{ 'media': data.preview }">
+    <li :class="{ 'media': data.preview }" @click="openResult(data.id)">
         <figure v-if="data.preview">
             <img :src="data.preview">
             <figcaption v-html="data.title" v-if="data.title && data.title.indexOf(' ') > -1"></figcaption>
@@ -9,12 +9,20 @@
 </template>
 
 <script>
+    import { mapMutations } from 'vuex'
     export default {
         name: 'Result',
         props: {
             data: {
                 type: Object,
                 required: true
+            }
+        },
+        methods: {
+            ...mapMutations(['toggle_modal']),
+            openResult (id) {
+                this.$router.push({path: '', params: {id: id}})
+                this.toggle_modal(true)
             }
         }
     }

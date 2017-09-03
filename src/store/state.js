@@ -1,6 +1,7 @@
 const state = {
     searching: false,
-    results: null
+    results: null,
+    modalVisible: false
 }
 
 export default state

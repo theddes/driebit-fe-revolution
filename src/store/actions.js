@@ -1,5 +1,6 @@
 const actions = {
-    updateSearchResults (context, results) {
+    async updateSearchResults (context, results) {
+        // A bit of filtering on the data...
         // move this to interceptor?
         const processedResults = results.map((result, index) => {
             return {
@@ -11,7 +12,7 @@ const actions = {
             }
         })
         setTimeout(() => {
-            return context.commit('update_search_results', processedResults)
+            context.commit('update_search_results', processedResults)
         }, 300)
     }
 }

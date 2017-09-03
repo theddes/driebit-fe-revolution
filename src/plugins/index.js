@@ -5,7 +5,7 @@ import until from './until'
 require('./axios')
 
 Vue.mixin({
-    created: function () {
+    created () {
         this.until = until
         this.$config = config
     }

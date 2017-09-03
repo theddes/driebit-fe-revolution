@@ -7,25 +7,35 @@
 </template>
 
 <script>
-    import { mapActions } from 'vuex'
+    import { mapState, mapActions, mapMutations } from 'vuex'
     export default {
         name: 'Search',
         data: () => ({
             term: ''
         }),
+        computed: {
+            ...mapState(['results'])
+        },
         methods: {
             ...mapActions(['updateSearchResults']),
+            ...mapMutations(['toggle_modal']),
             async search () {
+                // update url params
                 this.$router.push({path: '', params: {term: this.term}})
+
+                // clear search results on empty search
                 if (!this.term.length) return this.updateSearchResults([])
 
-                const query = await this.until(this.axios.get(`/search?text=${this.term}${this.$config.api.parameters}`))
+                // get results and pass to store
+                const query = await this.until(
+                    this.axios.get(`/search?text=${this.term}${this.$config.api.parameters}`)
+                )
                 this.updateSearchResults(query.data)
             }
         },
         mounted () {
             this.term = this.$route.params.term || ''
-            this.search()
+            this.term.length && this.search()
         }
     }
 </script>

@@ -27,6 +27,8 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 
+# ------ I didn't have time to write tests :( ------
+
 # run unit tests
 npm run unit
 

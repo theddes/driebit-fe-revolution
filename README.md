@@ -1,6 +1,6 @@
 # Driebit Revolution
 
-Development time: *4 hours*
+Development time: *+/- 5 hours*
 
 > **Scaffolding was done by [`vue-CLI`](https://github.com/vuejs/vue-cli) using the [PWA template](https://github.com/vuejs-templates/pwa)**
 >
@@ -38,3 +38,5 @@ npm test
 ```
 
 For detailed explanation on how things work, also checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+![](https://i.redd.it/f5fhg56ixaiz.jpg)

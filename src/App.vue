@@ -1,6 +1,9 @@
 <template>
     <div id="app">
-        <transition name="overlay">
+        <transition name="fadein">
+            <loader v-if="searching"></loader>
+        </transition>
+        <transition name="fadein">
             <modal v-if="modalVisible"></modal>
         </transition>
         <router-view></router-view>
@@ -11,13 +14,29 @@
 </template>
 
 <script>
-    import { mapState } from 'vuex'
+    import { mapState, mapMutations } from 'vuex'
+    import loader from '@/components/loader'
     import modal from '@/components/modal'
     export default {
         name: 'Driebit',
-        components: { modal },
+        components: { loader, modal },
+        data: () => ({
+            loaded: false
+        }),
         computed: {
             ...mapState(['searching', 'results', 'modalVisible'])
+        },
+        methods: {
+            ...mapMutations(['toggle_modal'])
+        },
+        watch: {
+            // hacky way for demo purposes
+            searching: function (searching) {
+                if (!searching && !this.loaded) {
+                    this.loaded = true
+                    this.toggle_modal(true)
+                }
+            }
         }
     }
 </script>
@@ -26,7 +45,7 @@
     @import 'assets/styles/main.css';
 
     #app {
-        background: var(--color-bg) url(assets/images/light_wool.png) repeat;
+        background: var(--color-bg) url(assets/images/confectionary.png) repeat;
         min-height: 100vh;
         position: relative;
     }

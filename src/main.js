@@ -7,7 +7,7 @@ import './plugins'
 
 Vue.config.productionTip = false
 
-// forcing https on surge
+// forcing https on surge ¯\_(ツ)_/¯
 if (location.protocol !== 'https:' && location.host.indexOf('surge') !== -1) {
     location.href = 'https:' + window.location.href.substring(window.location.protocol.length)
 }

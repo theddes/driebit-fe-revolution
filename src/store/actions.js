@@ -10,7 +10,7 @@ const actions = {
                 title: (result.title.trans) ? result.title.trans.nl : result.title,
                 summary: (result.summary) ? (result.summary.trans) ? result.summary.trans.nl : result.summary || false : false
             }
-        })
+        }).filter(result => result.preview)
         setTimeout(() => {
             context.commit('update_search_results', processedResults)
         }, 300)

@@ -1,6 +1,7 @@
 <template>
     <aside class="modal" @click="closeModal" v-if="result">
         <section class="modal-inner">
+            <span class="modal-title" v-html="result.title"></span>
             <img :src="result.preview">
         </section>
     </aside>
@@ -23,7 +24,7 @@
             }
         },
         mounted () {
-            this.result = this.results.find(entry => entry.id === this.$route.params.id)
+            this.result = this.results.find(entry => parseInt(entry.id) === parseInt(this.$route.params.id))
         }
     }
 </script>
@@ -43,7 +44,14 @@
         .modal-inner {
             max-width: 60%;
             background: white;
+            position: relative;
             width: auto;
+            .modal-title {
+                position: absolute;
+                top: -1.5em;
+                left: 0;
+                color: white;
+            }
             img {
                 max-height: 50vh;
             }

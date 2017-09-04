@@ -1,14 +1,17 @@
 @keyframes driebit {
     0% {
         filter: sepia(0) saturate(2) grayscale(30%);
+        transform: scale(1);
         opacity: 1;
     }
     50% {
         filter: sepia(1) saturate(3) grayscale(10%);
+        transform: scale(0.95);
         opacity: 0.7;
     }  
     100% {
         filter: sepia(0) saturate(2) grayscale(30%);
+        transform: scale(1);
         opacity: 1;
     }
 }
@@ -30,10 +33,10 @@
     transform: translateY(-3em);
 }
 
-.overlay-enter-active, .overlay-leave-active {
+.fadein-enter-active, .fadein-leave-active {
     transition: all 0.3s;
     animation: none;
 }
-.overlay-enter, .overlay-leave-to {
+.fadein-enter, .fadein-leave-to {
     opacity: 0;
 }

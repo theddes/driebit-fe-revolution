@@ -2,7 +2,6 @@
     <transition-group role="list" name="list" tag="ul" v-if="results" mode="out-in">
         <result
             v-for="(result, index) in results"
-            v-if="result.preview"
             :key="result.id"
             :data="result"
             role="listitem">
@@ -26,7 +25,7 @@
     ul {
         column-gap: 1.5em; 
         column-width: 15em;
-        margin: 6.5em auto;
+        margin: 7.5em auto;
         max-width: 70em;
         padding: 0 2em;
         position: relative;
@@ -34,8 +33,8 @@
         z-index: 10;
         &:hover {
             li:not(:hover) {
-                filter: grayscale(100%);
-                opacity: 0.9;
+                // filter: grayscale(100%);
+                opacity: 0.75;
             }
         }
     }

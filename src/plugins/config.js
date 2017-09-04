@@ -5,6 +5,10 @@ const config = {
     api: {
         base: 'https://www.entoen.nu/api',
         parameters: `&format=simple&limit=${limit}`
+    },
+    searchSettings: {
+        limit,
+        forcedLoadTime: 50 // ms per result.. for the sake of UX
     }
 }
 

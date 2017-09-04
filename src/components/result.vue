@@ -1,17 +1,20 @@
 <template>
     <li :class="{ 'media': data.preview }" @click="openResult(data.id)">
         <figure v-if="data.preview">
-            <img :src="data.preview">
+            <img :src="data.preview" :style="{ visibility: (searching) ? 'hidden': 'visible' }" alt="">
             <figcaption v-html="data.title" v-if="data.title && data.title.indexOf(' ') > -1"></figcaption>
         </figure>
-        <span v-html="data.title" v-if="data.title && data.title.indexOf(' ') > -1"></span>
+        <span v-html="data.title" v-if="data.title && data.title.indexOf(' ') > -1 && !searching"></span>
     </li>
 </template>
 
 <script>
-    import { mapMutations } from 'vuex'
+    import { mapState, mapMutations } from 'vuex'
     export default {
         name: 'Result',
+        computed: {
+            ...mapState(['searching'])
+        },
         props: {
             data: {
                 type: Object,
@@ -32,18 +35,34 @@
     li {
         backface-visibility: hidden;
         background: rgba(255, 255, 255, 1);
-        border: 1px solid #e6e6e6;
+        border-radius: 4px;
+        border: 1px solid #5a5a5a;
         cursor: pointer;
         display: inline-block;
         font-size: 1.1em;
         font-weight: 300;
-        margin: 0.5em;
+        margin: 0.5em 0.2em;
         overflow: hidden;
         padding: 0.7em 0.5em;
+        position: relative;
         transition: all .2s;
         user-select: none;
         width: 100%;
         will-change: transform;
+        &:hover {
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1) inset;
+            &:after, &:before {
+                border-radius: 100px/10px;
+                bottom: 14px;
+                box-shadow: 0 0 25px 3px #000;
+                content: '';
+                left: 0;
+                position: absolute;
+                right: 0;
+                top: 14px;
+                z-index: -1;
+            }
+        }
         &.media {
             padding: 0;
             position: relative;
@@ -62,8 +81,9 @@
                 top: 0;
             }
             figcaption {
-                background: rgba(255, 255, 255, 0.8);
+                background: #454339;
                 bottom: 0;
+                color: white;
                 padding-bottom: 0.4em;
                 padding: 0.5em;
                 text-align: center;

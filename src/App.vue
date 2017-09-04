@@ -20,23 +20,28 @@
     export default {
         name: 'Driebit',
         components: { loader, modal },
-        data: () => ({
-            loaded: false
-        }),
         computed: {
             ...mapState(['searching', 'results', 'modalVisible'])
         },
         methods: {
             ...mapMutations(['toggle_modal'])
         },
+        // hacky!!! For demo only.. last minute addition, need to find a better way to handle this initial load of the modal
+        data: () => ({
+            loaded: false
+        }),
         watch: {
-            // hacky way for demo purposes
             searching: function (searching) {
-                if (!searching && !this.loaded) {
+                if (!searching && !this.loaded && this.$route.params.id) {
                     this.loaded = true
                     this.toggle_modal(true)
                 }
             }
+        },
+        mounted () {
+            setTimeout(() => {
+                this.loaded = true
+            }, 4000)
         }
     }
 </script>

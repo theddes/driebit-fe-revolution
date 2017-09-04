@@ -43,7 +43,6 @@
         z-index: 1000;
         .modal-inner {
             max-width: 60%;
-            background: white;
             position: relative;
             width: auto;
             .modal-title {
@@ -54,6 +53,7 @@
             }
             img {
                 max-height: 50vh;
+                max-width: 100%;
             }
         }
     }

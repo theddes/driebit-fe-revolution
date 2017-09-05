@@ -80,8 +80,10 @@
             }
         }
         .search-options {
+            color: #7a8862;
             float: right;
             padding: 0.2em 0.5em;
+            text-shadow: 0px 0px 1px white;
             transform: translateY(-2.35em);
         }
     }

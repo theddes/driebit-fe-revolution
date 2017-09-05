@@ -49,18 +49,21 @@
         user-select: none;
         width: 100%;
         will-change: transform;
+        &:after {
+            background: #97C93C;
+            content: '';
+            height: 100%;
+            left: 0;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            transition: all .2s;
+            width: 100%;
+        }
         &:hover {
             box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.1) inset;
-            &:after, &:before {
-                border-radius: 100px/10px;
-                bottom: 14px;
-                box-shadow: 0 0 25px 3px #000;
-                content: '';
-                left: 0;
-                position: absolute;
-                right: 0;
-                top: 14px;
-                z-index: -1;
+            &:after {
+                opacity: 0.2;
             }
         }
         &.media {
